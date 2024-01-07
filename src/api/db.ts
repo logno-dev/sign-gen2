@@ -7,6 +7,6 @@ const client = createClient({
 
 
 export async function getHoldSigns() {
-  return await client.execute("select * from test")
-
+  const data = await client.execute("select * from test")
+  return data.rows[0][1]
 }
